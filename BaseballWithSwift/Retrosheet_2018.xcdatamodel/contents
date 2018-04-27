@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14094.4" systemVersion="17E139j" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GameLog" representedClassName="NSManagedObject">
+        <attribute name="acquisitionInfo" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="additionalInfo" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="attendance" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="completion" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="dayOfWeek" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="dayOrNight" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstBaseUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstBaseUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="forfeitInfo" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="gameWinningRBIBatterID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="gameWinningRBIBatterName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="home2B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="home3B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeAB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeAFOCI" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter1ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter1Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter1Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter2ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter2Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter2Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter3ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter3Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter3Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter4ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter4Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter4Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter5ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter5Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter5Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter6ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter6Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter6Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter7ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter7Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter7Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter8ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter8Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter8Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter9ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter9Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBatter9Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeBK" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeCS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeE" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeGIDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeHBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeHR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeIBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeIndividualER" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeLineScore" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeLOB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeManagerID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeManagerName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homePB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homePitchersUsed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homePlateUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homePlateUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homePO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeRBI" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeSB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeSF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeSH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeSO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeStartingPitcherID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeStartingPitcherName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeTeamER" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeTeamGameNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeTeamID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeTeamLeague" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeTP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="homeWP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="lengthOfGameInOuts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="LFUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="LFUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="losingPitcherID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="losingPitcherName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="numberOfGame" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="parkID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="protestInfo" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="RFUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="RFUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="savingPitcherID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="savingPitcherName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="secondBaseUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="secondBaseUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="thirdBaseUmpireID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="thirdBaseUmpireName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="timeOfGameInMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visiting2B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visiting3B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingAB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingAFOCI" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter1ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter1Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter1Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter2ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter2Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter2Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter3ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter3Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter3Pos" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter4ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter4Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter4Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter5ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter5Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter5Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter6ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter6Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter6Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter7ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter7Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter7Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter8ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter8Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter8Pos" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter9ID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter9Name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBatter9Pos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingBK" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingCS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingE" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingGIDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingHBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingHR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingIBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingIndividualER" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingLineScore" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingLOB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingManagerID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingManagerName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingPB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingPitchersUsed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingPO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingRBI" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingSB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingScore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingSF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingSH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingSO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingStartingPitcherID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingStartingPitcherName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingTeamER" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingTeamGameNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingTeamID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingTeamLeague" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingTP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="visitingWP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="winningPitcherID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="winningPitcherName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <userInfo>
+            <entry key="com.apple.syncservices.IdentityProperties" value=""/>
+        </userInfo>
+    </entity>
+    <entity name="Park" representedClassName="NSManagedObject">
+        <attribute name="aka" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="city" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="league" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="notes" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="parkID" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="state" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <userInfo>
+            <entry key="com.apple.syncservices.IdentityProperties" value=""/>
+        </userInfo>
+    </entity>
+    <entity name="RetroID" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="coachDebut" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerDebut" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameFirst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameLast" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="umpireDebut" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="approximatePrimary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="approximateSecondary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="draftRound" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="draftType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromLeagueIDOrName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromTeamIDOrName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerIDOrName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="secondaryDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="toLeagueIDOrName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toTeamIDOrName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transactionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GameLog" positionX="160" positionY="192" width="128" height="2460"/>
+        <element name="Park" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="RetroID" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Transaction" positionX="0" positionY="0" width="128" height="270"/>
+    </elements>
+</model>

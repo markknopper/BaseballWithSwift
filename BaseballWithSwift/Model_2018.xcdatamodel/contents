@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14124.1" systemVersion="17E170c" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllstarFull" representedClassName="AllstarFull" syncable="YES">
+        <attribute name="gameID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startingPos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="allStarGames" inverseEntity="Master" syncable="YES"/>
+        <relationship name="team" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="allStars" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamIndex">
+            <fetchIndexElement property="team" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Appearances" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="g_1b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_2b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_3b" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_all" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_batting" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_c" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_cf" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_defense" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_dh" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_lf" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_of" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_p" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_ph" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_pr" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_rf" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g_ss" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="appearances" inverseEntity="Master" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="AwardsManagers" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="awardID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tie" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="manager" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Managers" inverseName="awards" inverseEntity="Managers" syncable="YES"/>
+        <fetchIndex name="byManagerIndex">
+            <fetchIndexElement property="manager" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <userInfo>
+            <entry key="origFile" value="AwardsManagers.csv"/>
+        </userInfo>
+    </entity>
+    <entity name="AwardsPlayers" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="awardID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tie" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="awards" inverseEntity="Master" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="AwardsShareManagers" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="awardID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pointsMax" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pointsWon" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="votesFirst" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="manager" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Managers" inverseName="awardsShares" inverseEntity="Managers" syncable="YES"/>
+        <fetchIndex name="byManagerIndex">
+            <fetchIndexElement property="manager" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="AwardsSharePlayers" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="awardID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pointsMax" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pointsWon" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="votesFirst" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="awardShares" inverseEntity="Master" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Batting" representedClassName="Batting" syncable="YES">
+        <attribute name="aB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bA" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doubles_2B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oBP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="oPS" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rBI" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sLG" optional="YES" attributeType="Float" minValueString="0" maxValueString="4" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="stint" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triples_3B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="battingSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="batters" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIDIndex">
+            <fetchIndexElement property="playerID" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="BattingPost" representedClassName=".BattingPost" syncable="YES">
+        <attribute name="aB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bA" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doubles_2B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rBI" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triples_3B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="battingPostSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="battingPost" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="BattingTotals" representedClassName="BattingTotals" syncable="YES">
+        <attribute name="aB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bA" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doubles_2B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="oBP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="oPS" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rBI" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sLG" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="triples_3B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="battingTotals" inverseEntity="Master" syncable="YES"/>
+    </entity>
+    <entity name="CollegePlaying" syncable="YES">
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="schools" inverseEntity="Master" syncable="YES"/>
+        <relationship name="school" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Schools" inverseName="players" inverseEntity="Schools" syncable="YES"/>
+    </entity>
+    <entity name="Fielding" representedClassName="Fielding" syncable="YES">
+        <attribute name="a" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="e" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fPct" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="innOuts" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="stint" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="zR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="fieldingRecords" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="fielders" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIDIndex">
+            <fetchIndexElement property="playerID" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <userInfo>
+            <entry key="origFile" value="value"/>
+        </userInfo>
+    </entity>
+    <entity name="FieldingOF" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="gCF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gLF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gRF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stint" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="fieldingOFSeasons" inverseEntity="Master" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="FieldingPost" representedClassName="FieldingPost" syncable="YES">
+        <attribute name="a" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="e" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fPct" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="innOuts" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="fieldingPostSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="fieldingPost" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="FieldingTotals" representedClassName="FieldingTotals" syncable="YES">
+        <attribute name="a" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="e" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fPct" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="innOuts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="seasons" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="fieldingTotals" inverseEntity="Master" syncable="YES"/>
+    </entity>
+    <entity name="FranchiseTotals" representedClassName="FranchiseTotals" syncable="YES">
+        <attribute name="aB" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="attendance" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bA" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bBA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cG" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doubles_2B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="e" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eRA" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="franchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gHome" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hRA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iPOuts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="oBP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sHO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sLG" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sOA" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sV" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="triples_3B" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="teamsFranchises" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamsFranchises" inverseName="franchiseTotals" inverseEntity="TeamsFranchises" syncable="YES"/>
+    </entity>
+    <entity name="HallOfFame" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="ballots" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inducted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="needed" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="needed_note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="votedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="votes" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="hallOfFameSeasons" inverseEntity="Master" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Managers" representedClassName="Managers" syncable="YES">
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="inseason" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plyrMgr" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="awards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AwardsManagers" inverseName="manager" inverseEntity="AwardsManagers" syncable="YES"/>
+        <relationship name="awardsShares" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AwardsShareManagers" inverseName="manager" inverseEntity="AwardsShareManagers" syncable="YES"/>
+        <relationship name="managerHalves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ManagersHalf" inverseName="manager" inverseEntity="ManagersHalf" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="managerSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="managers" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIDIndex">
+            <fetchIndexElement property="playerID" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAwardsIndex">
+            <fetchIndexElement property="awards" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAwardsSharesIndex">
+            <fetchIndexElement property="awardsShares" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byManagerHalvesIndex">
+            <fetchIndexElement property="managerHalves" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="ManagersHalf" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="half" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="inseason" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="manager" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Managers" inverseName="managerHalves" inverseEntity="Managers" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Teams" inverseName="managerHalves" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byManagerIndex">
+            <fetchIndexElement property="manager" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="ManagerTotals" representedClassName="ManagerTotals" syncable="YES">
+        <attribute name="g" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="managerTotals" inverseEntity="Master" syncable="YES"/>
+    </entity>
+    <entity name="Master" representedClassName="Master" syncable="YES">
+        <attribute name="bats" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="test" value="bats"/>
+            </userInfo>
+        </attribute>
+        <attribute name="bbrefID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthDay" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="birthMonth" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="birthState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthYear" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deathCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deathCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deathDay" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deathMonth" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deathState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deathYear" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="debut" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalGame" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nameFirst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameGiven" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameLast" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playedInLatestYear" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="retroID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startedInLatestYear" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="throws" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="allStarGames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AllstarFull" inverseName="player" inverseEntity="AllstarFull" syncable="YES"/>
+        <relationship name="appearances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Appearances" inverseName="player" inverseEntity="Appearances" syncable="YES"/>
+        <relationship name="awards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AwardsPlayers" inverseName="player" inverseEntity="AwardsPlayers" syncable="YES"/>
+        <relationship name="awardShares" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AwardsSharePlayers" inverseName="player" inverseEntity="AwardsSharePlayers" syncable="YES"/>
+        <relationship name="battingPostSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BattingPost" inverseName="player" inverseEntity="BattingPost" syncable="YES"/>
+        <relationship name="battingSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batting" inverseName="player" inverseEntity="Batting" syncable="YES"/>
+        <relationship name="battingTotals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BattingTotals" inverseName="player" inverseEntity="BattingTotals" syncable="YES"/>
+        <relationship name="fieldingOFSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FieldingOF" inverseName="player" inverseEntity="FieldingOF" syncable="YES"/>
+        <relationship name="fieldingPostSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FieldingPost" inverseName="player" inverseEntity="FieldingPost" syncable="YES"/>
+        <relationship name="fieldingRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fielding" inverseName="player" inverseEntity="Fielding" syncable="YES"/>
+        <relationship name="fieldingTotals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FieldingTotals" inverseName="player" inverseEntity="FieldingTotals" syncable="YES"/>
+        <relationship name="hallOfFameSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HallOfFame" inverseName="player" inverseEntity="HallOfFame" syncable="YES"/>
+        <relationship name="managerSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Managers" inverseName="player" inverseEntity="Managers" syncable="YES"/>
+        <relationship name="managerTotals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagerTotals" inverseName="player" inverseEntity="ManagerTotals" syncable="YES"/>
+        <relationship name="pitchingPostSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PitchingPost" inverseName="player" inverseEntity="PitchingPost" syncable="YES"/>
+        <relationship name="pitchingSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pitching" inverseName="player" inverseEntity="Pitching" syncable="YES"/>
+        <relationship name="pitchingTotals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PitchingTotals" inverseName="player" inverseEntity="PitchingTotals" syncable="YES"/>
+        <relationship name="salarySeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Salaries" inverseName="player" inverseEntity="Salaries" syncable="YES"/>
+        <relationship name="schools" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollegePlaying" inverseName="player" inverseEntity="CollegePlaying" syncable="YES"/>
+        <fetchIndex name="byNameFirstIndex">
+            <fetchIndexElement property="nameFirst" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byNameLastIndex">
+            <fetchIndexElement property="nameLast" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPlayerIDIndex">
+            <fetchIndexElement property="playerID" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAppearancesIndex">
+            <fetchIndexElement property="appearances" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAwardsIndex">
+            <fetchIndexElement property="awards" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAwardSharesIndex">
+            <fetchIndexElement property="awardShares" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byBattingPostSeasonsIndex">
+            <fetchIndexElement property="battingPostSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byBattingSeasonsIndex">
+            <fetchIndexElement property="battingSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFieldingOFSeasonsIndex">
+            <fetchIndexElement property="fieldingOFSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFieldingPostSeasonsIndex">
+            <fetchIndexElement property="fieldingPostSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFieldingRecordsIndex">
+            <fetchIndexElement property="fieldingRecords" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byHallOfFameSeasonsIndex">
+            <fetchIndexElement property="hallOfFameSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byManagerSeasonsIndex">
+            <fetchIndexElement property="managerSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPitchingPostSeasonsIndex">
+            <fetchIndexElement property="pitchingPostSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPitchingSeasonsIndex">
+            <fetchIndexElement property="pitchingSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="bySalarySeasonsIndex">
+            <fetchIndexElement property="salarySeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="bySchoolsIndex">
+            <fetchIndexElement property="schools" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byAllStarGamesIndex">
+            <fetchIndexElement property="allStarGames" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="MasterLetterIndex" representedClassName="MasterLetterIndex" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="letter" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Parks" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parkAlias" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parkKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parkName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pitching" representedClassName="Pitching" syncable="YES">
+        <attribute name="bAOpp" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bFP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bK" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cG" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eRA" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iPOuts" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sHO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="stint" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sV" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wHIP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="pitchingSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="pitchers" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIDIndex">
+            <fetchIndexElement property="playerID" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="PitchingPost" representedClassName="PitchingPost" syncable="YES">
+        <attribute name="bAOpp" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bFP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bK" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cG" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eRA" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iPOuts" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sHO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sV" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="pitchingPostSeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeasons" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="pitchingPost" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonsIndex">
+            <fetchIndexElement property="teamSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="PitchingTotals" representedClassName="PitchingTotals" syncable="YES">
+        <attribute name="bAOpp" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bFP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bK" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cG" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eRA" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gIDP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iBB" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iPOuts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sH" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sHO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sV" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wHIP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="pitchingTotals" inverseEntity="Master" syncable="YES"/>
+    </entity>
+    <entity name="Salaries" representedClassName="Salaries" syncable="YES">
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="salarySeasons" inverseEntity="Master" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="salaries" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byPlayerIndex">
+            <fetchIndexElement property="player" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Schools" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_full" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schoolID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollegePlaying" inverseName="school" inverseEntity="CollegePlaying" syncable="YES"/>
+        <fetchIndex name="byPlayersIndex">
+            <fetchIndexElement property="players" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="SeriesPost" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="lgIDloser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgIDwinner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="losses" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamIDloser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamIDwinner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ties" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wins" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="losingTeamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="postSeasonSeriesLosses" inverseEntity="Teams" syncable="YES"/>
+        <relationship name="winningTeamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="postSeasonSeriesWins" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byLosingTeamSeasonIndex">
+            <fetchIndexElement property="losingTeamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byWinningTeamSeasonIndex">
+            <fetchIndexElement property="winningTeamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Teams" representedClassName="Teams" syncable="YES">
+        <attribute name="aB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="attendance" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bA" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bBA" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="bPF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cG" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cS" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="divID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="divWin" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doubles_2B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="e" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eRA" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fPct" optional="YES" attributeType="Float" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="franchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gHome" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hA" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hBP" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hR" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hRA" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="iPOuts" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lgWin" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="logoFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oBP" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="oPS" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="park" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pPF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="r" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rA" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sB" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sF" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sHO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sLG" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sO" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sOA" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sV" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamIDBR" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamIDlahman45" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamIDretro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triples_3B" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wCWin" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wSWin" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="allStars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AllstarFull" inverseName="team" inverseEntity="AllstarFull" syncable="YES"/>
+        <relationship name="batters" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Batting" inverseName="teamSeason" inverseEntity="Batting" syncable="YES"/>
+        <relationship name="battingPost" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BattingPost" inverseName="teamSeason" inverseEntity="BattingPost" syncable="YES"/>
+        <relationship name="fielders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fielding" inverseName="teamSeason" inverseEntity="Fielding" syncable="YES"/>
+        <relationship name="fieldingPost" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FieldingPost" inverseName="teamSeason" inverseEntity="FieldingPost" syncable="YES"/>
+        <relationship name="franchise" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TeamsFranchises" inverseName="teamSeasons" inverseEntity="TeamsFranchises" syncable="YES"/>
+        <relationship name="managerHalves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ManagersHalf" inverseName="teamSeason" inverseEntity="ManagersHalf" syncable="YES"/>
+        <relationship name="managers" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Managers" inverseName="teamSeason" inverseEntity="Managers" syncable="YES"/>
+        <relationship name="pitchers" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Pitching" inverseName="teamSeason" inverseEntity="Pitching" syncable="YES"/>
+        <relationship name="pitchingPost" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PitchingPost" inverseName="teamSeasons" inverseEntity="PitchingPost" syncable="YES"/>
+        <relationship name="postSeasonSeriesLosses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SeriesPost" inverseName="losingTeamSeason" inverseEntity="SeriesPost" syncable="YES"/>
+        <relationship name="postSeasonSeriesWins" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SeriesPost" inverseName="winningTeamSeason" inverseEntity="SeriesPost" syncable="YES"/>
+        <relationship name="salaries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Salaries" inverseName="teamSeason" inverseEntity="Salaries" syncable="YES"/>
+        <relationship name="teamHalves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TeamsHalf" inverseName="teamSeason" inverseEntity="TeamsHalf" syncable="YES"/>
+        <fetchIndex name="byAllStarsIndex">
+            <fetchIndexElement property="allStars" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byBattersIndex">
+            <fetchIndexElement property="batters" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byBattingPostIndex">
+            <fetchIndexElement property="battingPost" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFieldersIndex">
+            <fetchIndexElement property="fielders" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFieldingPostIndex">
+            <fetchIndexElement property="fieldingPost" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byFranchiseIndex">
+            <fetchIndexElement property="franchise" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byManagerHalvesIndex">
+            <fetchIndexElement property="managerHalves" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byManagersIndex">
+            <fetchIndexElement property="managers" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPitchersIndex">
+            <fetchIndexElement property="pitchers" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPitchingPostIndex">
+            <fetchIndexElement property="pitchingPost" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPostSeasonSeriesLossesIndex">
+            <fetchIndexElement property="postSeasonSeriesLosses" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byPostSeasonSeriesWinsIndex">
+            <fetchIndexElement property="postSeasonSeriesWins" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="bySalariesIndex">
+            <fetchIndexElement property="salaries" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byTeamHalvesIndex">
+            <fetchIndexElement property="teamHalves" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="TeamsFranchises" representedClassName="TeamsFranchises" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="franchID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="franchName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nAassoc" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="franchiseTotals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FranchiseTotals" inverseName="teamsFranchises" inverseEntity="FranchiseTotals" syncable="YES"/>
+        <relationship name="teamSeasons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Teams" inverseName="franchise" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byTeamSeasonsIndex">
+            <fetchIndexElement property="teamSeasons" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="TeamsHalf" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="divID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="divWin" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="g" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="half" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="l" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="teamID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yearID" optional="YES" attributeType="Integer 16" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="teamSeason" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Teams" inverseName="teamHalves" inverseEntity="Teams" syncable="YES"/>
+        <fetchIndex name="byTeamSeasonIndex">
+            <fetchIndexElement property="teamSeason" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <elements>
+        <element name="AllstarFull" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="Appearances" positionX="0" positionY="0" width="128" height="375"/>
+        <element name="AwardsManagers" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="AwardsPlayers" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="AwardsShareManagers" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="AwardsSharePlayers" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Batting" positionX="0" positionY="0" width="128" height="465"/>
+        <element name="BattingPost" positionX="0" positionY="0" width="128" height="420"/>
+        <element name="BattingTotals" positionX="0" positionY="0" width="128" height="390"/>
+        <element name="CollegePlaying" positionX="18" positionY="162" width="128" height="120"/>
+        <element name="Fielding" positionX="0" positionY="0" width="128" height="360"/>
+        <element name="FieldingOF" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="FieldingPost" positionX="0" positionY="0" width="128" height="345"/>
+        <element name="FieldingTotals" positionX="0" positionY="0" width="128" height="285"/>
+        <element name="FranchiseTotals" positionX="0" positionY="0" width="128" height="583"/>
+        <element name="HallOfFame" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="Managers" positionX="0" positionY="0" width="128" height="283"/>
+        <element name="ManagersHalf" positionX="0" positionY="0" width="128" height="225"/>
+        <element name="ManagerTotals" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Master" positionX="0" positionY="0" width="128" height="735"/>
+        <element name="MasterLetterIndex" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Parks" positionX="9" positionY="153" width="128" height="135"/>
+        <element name="Pitching" positionX="0" positionY="0" width="128" height="555"/>
+        <element name="PitchingPost" positionX="0" positionY="0" width="128" height="525"/>
+        <element name="PitchingTotals" positionX="0" positionY="0" width="128" height="480"/>
+        <element name="Salaries" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Schools" positionX="0" positionY="0" width="128" height="133"/>
+        <element name="SeriesPost" positionX="0" positionY="0" width="128" height="210"/>
+        <element name="Teams" positionX="0" positionY="0" width="128" height="1065"/>
+        <element name="TeamsFranchises" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="TeamsHalf" positionX="0" positionY="0" width="128" height="210"/>
+    </elements>
+</model>

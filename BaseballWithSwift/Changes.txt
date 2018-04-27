@@ -1,0 +1,66 @@
+2-6-2017: Starting over in a new Xcode project, due to Apple archive submit bug. Everything compiles and runs again, I think.
+
+2-13-2017: Make PlayerRankTableviewController an actual UITableViewController with grouped table style to fix problem of extra space on top.
+    Fix crash in postseason.
+    Fix spinner in player career in history ranking.
+2-14-2017: Fix 'Seasons' rankings by career fielding position, batting and pitching. Tap on Seasons in career player stats to get this.
+2-15-2017: Add build script to modify Ziparchive to remove non-production architecture (386 etc) for submitting archive build.
+    Replace build script to increment build version number. No longer requires separate build version file.
+    A few more build fixes.
+    Fix player rank table titles some more.
+2-16-2017: Gave up on ZipArchive framework and imported the code in. Submitted to App Store v9.3 --------------------------
+
+2-17-2017: Already found a bug. Fix tab labels on player rank TBC. Sigh
+    Sort awards, noticeable in career personal.
+2-18-2017: Database update to latest Chadwick/Turocy.
+    Update twitter handles in player personal info.
+Version to 9.4-------------------
+2-24-2017: Submit 9.4 binary to App Store ----------------------------------------
+2-25-2017: Make manager "Player-Manager" stat be Yes/No rather than 1/0.
+2-26-2017: Fix bug - crash when typing in search field in Years tab.
+3-9-2017: Update db to Chadwick v2017.2 https://github.com/chadwickbureau/baseballdatabank/releases/tag/v2017.2
+Version to 9.5----------------------------
+    Update player twitter handles (see Personal tab for each player).
+3-12-2017: Fix external URLs, and put URL computation in one place (Master+Query). This fixes bug: blank page when accessing external reference web sites like Baseball-Reference.com and Retrosheet.org from player years view or player career view.
+    Updated Transactions db now includes trades through December 2016.
+3-13-2017: submitted 9.5 to App Store =================================
+3-14-2017: ---------Accepted, for sale ------------------
+4-17-2017: Preparing new update 9.6:
+    Updated database with new Master (People) table including new player debut dates etc.
+    Add Innings Pitched to Team Pitching stats
+    Fix career tabs (Managing, Batting etc) to be in order starting with most games
+    Improve post-season pitching stats, particularly ERA. Also prevent crash on segmented tab
+----------------9.6 (61) submitted.
+1-29-2018: New data. Update to iOS 11 and Swift 4, etc.
+    Fix layout and UI issues. Stop spinner in Player Franchise and All-Time ranking, Team Rank in History, Team Rank in Franchise.
+    Updated SSZipArchive from https://github.com/ZipArchive/ZipArchive
+1-31-2018: Change once filename to include the year.
+    Improve the in-app purchase UI so it looks up and localizes the price.
+2-1-2018: New in-app purchase code seems to work. It even clears the Buy button when bought.
+2-6-2018: Commented out -(NSArray *)battingSeasonsByFranchise from Master+Query.m because it seemed brain damaged and nobody called it!
+    Fixed all analyzer problems!
+2-18-2018: Rename project to BaseballWithSwift
+    Change AllTeams to use new settings slide out view.
+2-20-2018: Change AllPlayers to use new settings slide out view.
+    Clarify search bar placeholder text on each of the 3 search bars. Maybe some day allow searching for anything on either one.
+    Disallow user interaction on tableview that is slid out to show settings table.
+    Fix dark grey top nav and tab bars in some view controllers. Make them all nice and white.
+    Change AllYears to use new settings slide out view.
+2-21-2018: Handle case where player had no transactions (no transactions for player).
+2-21-2018: WebViewController is now WKWebView (transparent change)
+    Fix two crashes on player Postseason.
+    Beautify Player Rank view controller cells.
+    Fix formatting where career fielding percentage=1.000 (Luis Vizcaino).
+2-25-2018: Submit baby. 9.7. Name on iTunesConnect now Baseball Stats 2018 Edition due to 30 character limit (bastards).
+3-1-2018: 9.7 released -------------------------------------------------
+3-3-2018: Leaders results table header now have years. WINS (TOP 10) SINGLE SEASON PITCHING  1920-2017.
+3-9-2018: Add percentage to Pitchers & PitcherTotals. This involves model (now Model_2018) change and database update (now Stats2017a).
+3-20-2018: Make Leaders work with pitcher percentage for both season & career.
+4-11-2018: Fix leaders: combine stints for easily summable stats, eg. sO, H.
+    Fix leaders: make minimums match baseball-reference.com in most cases.
+4-17-2018: New model Model2018b and database Stats2017b to include PitchingCombinedStints. Fix pitching leaders for single season averages: BAOpp, ERA, Percentage, WHIP.
+4-24-2018: Improved Leaders results in general
+    (today's improvement: career managing)
+    Updated Transactions data
+
+

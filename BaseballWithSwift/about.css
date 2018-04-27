@@ -1,0 +1,40 @@
+body {
+    color: black;
+    font-family: -apple-system;
+    font-size: 50px;
+}
+
+a {
+    color: black;
+}
+
+#text {
+    margin-left: 5px;
+    text-align: justify;
+    margin: 30px;
+    font-weight: normal
+}
+
+#right_bulb {
+    float: right;
+}
+
+#app_name {
+    margin-top: -10px;
+    margin: 30px;
+}
+
+#app_name p {
+    font-weight: bold
+    font-size: 50px;
+}
+
+#app_name img {
+    float: left;
+}
+
+#version {
+    font-size: 30px;
+    margin-left: 30px;
+}
+
